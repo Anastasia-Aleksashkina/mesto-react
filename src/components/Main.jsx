@@ -56,7 +56,7 @@ function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardOpen }) {
                 type="button"
                 className="profile__button-edit"
                 onClick={onEditProfile}
-              ></button>
+              />
             </div>
             <p className="profile__user-about">{userDescription}</p>
           </div>
@@ -65,13 +65,13 @@ function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardOpen }) {
           type="button"
           className="profile__button-edd"
           onClick={onAddPlace}
-        ></button>
+        />
       </section>
       <section className="elements root__elements">
         {cards.map((card) => (
           <Card
             card={card}
-            id={card._id}
+            key={card._id}
             src={card.link}
             title={card.name}
             likeCounter={card.likes.length}

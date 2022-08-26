@@ -1,8 +1,8 @@
 import React from "react";
 
-function Card({ id, src, title, card, onCardOpen, likeCounter }) {
+function Card({ keyId, src, title, card, onCardOpen, likeCounter }) {
   return (
-    <ul className="element" id={id}>
+    <ul className="element" key={keyId}>
       <li>
         <button className="element__delete" type="button"></button>
       </li>

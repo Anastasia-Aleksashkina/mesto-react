@@ -12,8 +12,8 @@ function PopupWithForm({ title, name, isOpen, onClose, children, buttonText }) {
           id={`${name}_close`}
           type="button"
           onClick={onClose}
-        ></button>
-        <form className="popup__form" name={`${name}_form`} novalidate>
+        />
+        <form className="popup__form" name={`${name}_form`} noValidate>
           <h3 className="popup__title">{title}</h3>
           {children}
           <button

@@ -63,8 +63,8 @@ function App() {
               placeholder="Имя"
               className="popup__input popup__input-name"
               required
-              minlength="2"
-              maxlength="40"
+              minLength="2"
+              maxLength="40"
             />
             <span id="name-error" className="popup__error-visible"></span>
           </div>
@@ -76,8 +76,8 @@ function App() {
               placeholder="Занятие"
               className="popup__input popup__input-about"
               required
-              minlength="2"
-              maxlength="200"
+              minLength="2"
+              maxLength="200"
             />
             <span id="about-error" className="popup__error-visible"></span>
           </div>
@@ -97,8 +97,8 @@ function App() {
               className="popup__input popup__input-city"
               placeholder="Название"
               required
-              minlength="2"
-              maxlength="30"
+              minLength="2"
+              maxLength="30"
             />
             <span id="city-error" className="popup__error-visible"></span>
           </div>
