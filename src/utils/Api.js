@@ -85,6 +85,10 @@ class Api {
       headers: this._headers,
     }).then(this._getJsonOrError);
   }
+
+  changeLikeCardStatus(card, isLiked) {
+    return isLiked ? this.putLikeCard(card) : this.deleteLikeCard(card)
+  }
 }
 
 export const api = new Api({
