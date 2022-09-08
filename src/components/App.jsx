@@ -41,9 +41,7 @@ function App() {
   }, []);
 
   function handleCardLike(card) {
-    const isLiked = card.likes.some((i) => i._id === currentUser._id); // Снова проверяем, есть ли уже лайк на этой карточке
-    console.log(isLiked);
-    // Отправляем запрос в API и получаем обновлённые данные карточки
+    const isLiked = card.likes.some((i) => i._id === currentUser._id); // Проверяем, есть ли уже лайк на этой карточке
     api
       .changeLikeCardStatus(card, !isLiked)
       .then((newCard) => {
@@ -152,7 +150,11 @@ function App() {
             onClose={closeAllPopups}
             onUpdateAvatar={handleUpdateAvatar}
           />
-          <AddPlacePopup isOpen={isAddPlacePopupOpen} onClose={closeAllPopups} onAddCard={handleAddCard} />
+          <AddPlacePopup
+            isOpen={isAddPlacePopupOpen}
+            onClose={closeAllPopups}
+            onAddCard={handleAddCard}
+          />
           <PopupWithForm
             title={"Вы уверены?"}
             name={"accept"}

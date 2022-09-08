@@ -5,7 +5,7 @@ function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
   const avatarRef = useRef(""); // записываем объект, возвращаемый хуком, в переменную
 
   function handleSubmit(e) {
-    e.preventDefault(); // Запрещаем браузеру переходить по адресу формы
+    e.preventDefault();
     onUpdateAvatar({ avatar: avatarRef.current.value });
   }
 
